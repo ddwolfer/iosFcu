@@ -62,6 +62,7 @@ PODS:
   - GoogleUtilities/UserDefaults (6.2.1):
     - GoogleUtilities/Logger
   - GTMSessionFetcher/Core (1.2.2)
+  - ImagePicker (3.1.0)
   - leveldb-library (1.20)
   - nanopb (0.3.901):
     - nanopb/decode (= 0.3.901)
@@ -74,6 +75,7 @@ DEPENDENCIES:
   - Firebase/Core
   - Firebase/Database
   - Firebase/Storage
+  - ImagePicker
 
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
@@ -87,6 +89,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUtilities
     - GTMSessionFetcher
+    - ImagePicker
     - leveldb-library
     - nanopb
 
@@ -101,9 +104,10 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 1e45fa601e6280c180880d57010390f6679cd971
   GoogleUtilities: c7a0b08bda3bf808be823ed151f0e28ac6866e71
   GTMSessionFetcher: 61bb0f61a4cb560030f1222021178008a5727a23
+  ImagePicker: db1fd7626337b2577c523bef5f499bbbe5a37079
   leveldb-library: 08cba283675b7ed2d99629a4bc5fd052cd2bb6a5
   nanopb: 2901f78ea1b7b4015c860c2fdd1ea2fee1a18d48
 
-PODFILE CHECKSUM: 3197765d9054301fd169480763d625da552ff6f1
+PODFILE CHECKSUM: 1407bb41472f766ed0087e1517428228ae13a80a
 
 COCOAPODS: 1.7.4

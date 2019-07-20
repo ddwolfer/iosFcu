@@ -11,4 +11,7 @@ target 'MCLABDemo01' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Core'
 
+  # Pods for camera
+  pod 'ImagePicker'
+
 end

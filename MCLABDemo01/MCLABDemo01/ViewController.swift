@@ -7,7 +7,8 @@
 //
 
 import UIKit
-import Foundation
+import AVFoundation
+import ImagePicker
 
 class ViewController: UIViewController {
 
@@ -28,7 +29,15 @@ class ViewController: UIViewController {
     
     //開始拍照or選照片
     @IBAction func startButton(_ sender: Any) {
+        let imagePickerController = ImagePickerController()
+        imagePickerController.delegate = self as? ImagePickerDelegate
+        imagePickerController.imageLimit = 1
+        present(imagePickerController, animated: true, completion: nil)
     }
 
 }
 
+extension ViewController{
+    
+    
+}
