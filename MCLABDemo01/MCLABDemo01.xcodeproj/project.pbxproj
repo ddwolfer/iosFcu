@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,7 @@
 		706DA25622E36C49002320AE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706DA25422E36C49002320AE /* Main.storyboard */; };
 		706DA25822E36C4A002320AE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 706DA25722E36C4A002320AE /* Assets.xcassets */; };
 		706DA25B22E36C4A002320AE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 706DA25922E36C4A002320AE /* LaunchScreen.storyboard */; };
+		706DA26322E391D6002320AE /* Kenney Blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706DA26222E391D6002320AE /* Kenney Blocks.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		706DA25722E36C4A002320AE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		706DA25A22E36C4A002320AE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		706DA25C22E36C4A002320AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		706DA26222E391D6002320AE /* Kenney Blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Blocks.ttf"; sourceTree = SOURCE_ROOT; };
 		7DBB35A2BFFC0F1B174252D6 /* Pods_MCLABDemo01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCLABDemo01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A00B3574CE1927067DD689 /* Pods-MCLABDemo01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCLABDemo01.release.xcconfig"; path = "Target Support Files/Pods-MCLABDemo01/Pods-MCLABDemo01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -72,6 +74,7 @@
 				706DA25022E36C49002320AE /* AppDelegate.swift */,
 				706DA25222E36C49002320AE /* ViewController.swift */,
 				706DA25422E36C49002320AE /* Main.storyboard */,
+				706DA26222E391D6002320AE /* Kenney Blocks.ttf */,
 				706DA25722E36C4A002320AE /* Assets.xcassets */,
 				706DA25922E36C4A002320AE /* LaunchScreen.storyboard */,
 				706DA25C22E36C4A002320AE /* Info.plist */,
@@ -85,7 +88,6 @@
 				5C866CFCAB3E169E85D6A354 /* Pods-MCLABDemo01.debug.xcconfig */,
 				F6A00B3574CE1927067DD689 /* Pods-MCLABDemo01.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -150,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				706DA25B22E36C4A002320AE /* LaunchScreen.storyboard in Resources */,
+				706DA26322E391D6002320AE /* Kenney Blocks.ttf in Resources */,
 				706DA25822E36C4A002320AE /* Assets.xcassets in Resources */,
 				706DA25622E36C49002320AE /* Main.storyboard in Resources */,
 			);
@@ -362,7 +365,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mclab.iosTest.MCLABDemo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -381,7 +384,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = mclab.iosTest.MCLABDemo01;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
