@@ -7,12 +7,8 @@
 //
 
 import UIKit
-import AVFoundation
-import ImagePicker
 
-class ViewController: UIViewController, ImagePickerDelegate{
-    
-    var imageSave : UIImage!
+class ViewController: UIViewController{
     
     @IBOutlet weak var mainTopBar: UINavigationItem!
     @IBOutlet weak var mainBackground: UIImageView!
@@ -29,26 +25,5 @@ class ViewController: UIViewController, ImagePickerDelegate{
             alphaBackgroundImage,for: .default)
     }
     
-    //開始拍照or選照片
-    @IBAction func startButton(_ sender: Any) {
-        let imagePickerController = ImagePickerController()
-        imagePickerController.delegate = self as? ImagePickerDelegate
-        imagePickerController.imageLimit = 1
-        present(imagePickerController, animated: true, completion: nil)
-    }
-
 }
 
-extension ViewController{
-    
-    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
-        
-    }
-    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
-        imageSave = images as? UIImage
-        dismiss(animated: true, completion: nil) //收起相機
-    }
-    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
-        dismiss(animated: true, completion: nil) //收起相機
-    }
-}
