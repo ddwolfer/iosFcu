@@ -10,8 +10,10 @@ import UIKit
 import AVFoundation
 import ImagePicker
 
-class ViewController: UIViewController {
-
+class ViewController: UIViewController, ImagePickerDelegate{
+    
+    var imageSave : UIImage!
+    
     @IBOutlet weak var mainTopBar: UINavigationItem!
     @IBOutlet weak var mainBackground: UIImageView!
     
@@ -39,5 +41,14 @@ class ViewController: UIViewController {
 
 extension ViewController{
     
-    
+    func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        
+    }
+    func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
+        imageSave = images as? UIImage
+        dismiss(animated: true, completion: nil) //收起相機
+    }
+    func cancelButtonDidPress(_ imagePicker: ImagePickerController){
+        dismiss(animated: true, completion: nil) //收起相機
+    }
 }
