@@ -9,10 +9,14 @@
 import Foundation
 import UIKit
 import ImagePicker
+import FirebaseStorage
+import Firebase
 
 class CheckImageController : UIViewController,ImagePickerDelegate{
     //接收相機的照片
     var imageSave : UIImage!
+    var getString : String!
+    var getImage : UIImage!
     //預覽照片
     @IBOutlet weak var showImage: UIImageView!
     
@@ -23,13 +27,14 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
     override func viewDidLoad() {
         super.viewDidLoad()
         //code
-        confirmButton.isHidden = true
-        reButton.isHidden = true
+        //confirmButton.isHidden = true
+        //reButton.isHidden = true
         
         let alphaBackgroundImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(
             alphaBackgroundImage,for: .default)
-        self.CameraTrigger()
+        print("test :\(getString)")
+        showImage.image = getImage
     }
     //開啟相機
     func CameraTrigger(){
@@ -44,6 +49,13 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
     }
     
     @IBAction func ConfirmPhoto(_ sender: Any) {
+    }
+    
+    //傳值
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let sendPicController = segue.destination as! UploadImageController
+        sendPicController.getImage = showImage.image
+        sendPicController.getString = "send success"
     }
 }
 

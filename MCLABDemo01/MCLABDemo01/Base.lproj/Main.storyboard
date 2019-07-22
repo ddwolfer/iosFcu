@@ -42,15 +42,15 @@
                                 <color key="textColor" red="0.73725490196078436" green="0.38612123816820254" blue="0.4254407103321699" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5U-TS-N25">
-                                <rect key="frame" x="228" y="835" width="312" height="121"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e28-vP-PMM">
+                                <rect key="frame" x="199" y="841" width="371" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Kenney-Blocks" family="Kenney Blocks" pointSize="75"/>
+                                <fontDescription key="fontDescription" name="Kenney-Blocks" family="Kenney Blocks" pointSize="85"/>
                                 <state key="normal" title="START">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <segue destination="VF9-sk-acI" kind="show" id="OxL-ym-bfK"/>
+                                    <action selector="StartBtn:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2lP-bo-vU9"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -61,6 +61,7 @@
                     <connections>
                         <outlet property="mainBackground" destination="5W4-tk-4ss" id="6AG-ia-hA3"/>
                         <outlet property="mainTopBar" destination="kch-GS-JWA" id="D0T-d7-uip"/>
+                        <segue destination="VF9-sk-acI" kind="show" identifier="nextPage" id="gCE-Wa-53z"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -116,14 +117,14 @@
             </objects>
             <point key="canvasLocation" x="1655.46875" y="-531.4453125"/>
         </scene>
-        <!--View Controller-->
+        <!--Upload Image Controller-->
         <scene sceneID="bPf-Rb-V6y">
             <objects>
-                <viewController id="LwJ-1S-k1y" sceneMemberID="viewController">
+                <viewController id="LwJ-1S-k1y" customClass="UploadImageController" customModule="MCLABDemo01" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="B6h-ff-kdE">
                         <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.46274509803921571" green="0.72156862745098038" blue="0.73725490196078436" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="fNv-ZX-ec9"/>
                     </view>
                 </viewController>
