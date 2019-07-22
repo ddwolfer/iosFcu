@@ -18,7 +18,4 @@ class UploadImageController: UIViewController {
     var getImage : UIImage!
     var getString : String!
     
-    override func viewDidLoad() {
-        <#code#>
-    }
 }

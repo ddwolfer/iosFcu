@@ -16,6 +16,7 @@
 		706DA26322E391D6002320AE /* Kenney Blocks.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 706DA26222E391D6002320AE /* Kenney Blocks.ttf */; };
 		706DA26722E58AD3002320AE /* CheckImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706DA26622E58AD3002320AE /* CheckImageController.swift */; };
 		706DA26B22E5A2D8002320AE /* UploadImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 706DA26A22E5A2D8002320AE /* UploadImageController.swift */; };
+		706DA26D22E5BE81002320AE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 706DA26C22E5BE81002320AE /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		706DA26222E391D6002320AE /* Kenney Blocks.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Kenney Blocks.ttf"; sourceTree = SOURCE_ROOT; };
 		706DA26622E58AD3002320AE /* CheckImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckImageController.swift; sourceTree = "<group>"; };
 		706DA26A22E5A2D8002320AE /* UploadImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadImageController.swift; sourceTree = "<group>"; };
+		706DA26C22E5BE81002320AE /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		7DBB35A2BFFC0F1B174252D6 /* Pods_MCLABDemo01.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MCLABDemo01.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6A00B3574CE1927067DD689 /* Pods-MCLABDemo01.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MCLABDemo01.release.xcconfig"; path = "Target Support Files/Pods-MCLABDemo01/Pods-MCLABDemo01.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -80,6 +82,7 @@
 				706DA25422E36C49002320AE /* Main.storyboard */,
 				706DA26222E391D6002320AE /* Kenney Blocks.ttf */,
 				706DA25722E36C4A002320AE /* Assets.xcassets */,
+				706DA26C22E5BE81002320AE /* GoogleService-Info.plist */,
 				706DA25922E36C4A002320AE /* LaunchScreen.storyboard */,
 				706DA25C22E36C4A002320AE /* Info.plist */,
 				706DA26622E58AD3002320AE /* CheckImageController.swift */,
@@ -159,6 +162,7 @@
 			files = (
 				706DA25B22E36C4A002320AE /* LaunchScreen.storyboard in Resources */,
 				706DA26322E391D6002320AE /* Kenney Blocks.ttf in Resources */,
+				706DA26D22E5BE81002320AE /* GoogleService-Info.plist in Resources */,
 				706DA25822E36C4A002320AE /* Assets.xcassets in Resources */,
 				706DA25622E36C49002320AE /* Main.storyboard in Resources */,
 			);

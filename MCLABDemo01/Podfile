@@ -14,4 +14,6 @@ target 'MCLABDemo01' do
   # Pods for camera
   pod 'ImagePicker'
 
+  # Pods for loading animate
+  pod 'RSLoadingView'
 end
