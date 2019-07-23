@@ -97,11 +97,15 @@
 		</dict>
 		<key>RSLoadingView-RSLoadingView.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>16</integer>
 		</dict>
 		<key>RSLoadingView.xcscheme</key>
 		<dict>
+			<key>isShown</key>
+			<false/>
 			<key>orderHint</key>
 			<integer>15</integer>
 		</dict>

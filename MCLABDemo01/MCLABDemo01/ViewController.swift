@@ -52,7 +52,9 @@ class ViewController: UIViewController, ImagePickerDelegate{
 extension ViewController{
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
-        
+        imageSave = images.first
+        dismiss(animated: true, completion: nil) //收起相機
+        self.performSegue(withIdentifier: "nextPage", sender: nil)
     }
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
         imageSave = images.first
