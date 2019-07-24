@@ -30,14 +30,16 @@ class UploadImageController: UIViewController {
     @IBOutlet weak var wordFeedback: UILabel!
     //不同愛心數目的文字
     var resultWord : [String] = [
-    "1 heart looks strange",
-    "2 heart get closer",
-    "3 heart no bad",
-    "4 heart good couple",
-    "5 heart wonderful!"
+    "感覺有點距離喔",
+    "有笑容了 不過距離在近一點會更好",
+    "不錯喔，有交往一陣子的感覺囉如果能再貼近一點就能更剛高分囉",
+    "可以囉，有被閃到的感覺囉！如果能在更親密的動作就滿分囉",
+    "喜你們，你們現在是完全墜入愛河令人稱羨的親密情侶囉"
     ]
     override func viewDidLoad() {
         super.viewDidLoad()
+        wordFeedback.numberOfLines = 0
+        wordFeedback.lineBreakMode = NSLineBreakMode.byWordWrapping
         //code
         let alphaBackgroundImage = UIImage()
         self.navigationController?.navigationBar.setBackgroundImage(
