@@ -20,6 +20,7 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
     var imageSave : UIImage!
     var getString : String!
     var getImage : UIImage!
+    var getFakeScore : String!
     //預覽照片
     @IBOutlet weak var showImage: UIImageView!
     
@@ -48,25 +49,30 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
         imagePickerController.imageLimit = 2
         present(imagePickerController, animated: true, completion: nil)
     }
-    
+    //重拍一次
     @IBAction func ReTakePhoto(_ sender: Any) {
         self.CameraTrigger()
     }
-    
+    //按下確認
     @IBAction func ConfirmPhoto(_ sender: Any) {
         let loadingView = RSLoadingView(effectType: RSLoadingView.Effect.twins)
         loadingView.show(on: view)
+        FinalScoreResult = getFakeScore
+        //延迟3秒执行
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            print("时间2：", Date())
+            self.GetScoreDone()
+        }
         
-        self.UploadImage(self.showImage.image!, filename: "upload.jpg")
+        //self.UploadImage(self.showImage.image!, filename: "upload.jpg")
     }
-    
     //傳值給下一個Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sendPicController = segue.destination as! UploadImageController
         sendPicController.getImage = showImage.image
         sendPicController.getString = "send success"
-        sendPicController.getScore = "3"
-        //sendPicController.getScore = FinalScoreResult
+        //sendPicController.getScore = "3"
+        sendPicController.getScore = FinalScoreResult
     }
     @objc func backViewCustume(){
         self.navigationController?.popViewController(animated: true)
@@ -189,6 +195,7 @@ extension CheckImageController{
     }
     //獲得分數後的動作
     func GetScoreDone(){
+        //sleep(3)
         RSLoadingView.hide(from: view)
         performSegue(withIdentifier: "getScore", sender: nil)
     }

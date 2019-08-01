@@ -13,6 +13,8 @@ import ImagePicker
 class ViewController: UIViewController, ImagePickerDelegate{
     
     var imageSave : UIImage!
+    var fakeScore : String!
+    var fakeFlag = 0
     
     @IBOutlet weak var mainTopBar: UINavigationItem!
     @IBOutlet weak var mainBackground: UIImageView!
@@ -38,6 +40,7 @@ class ViewController: UIViewController, ImagePickerDelegate{
     
     //開始拍照or選照片
     @IBAction func StartBtn(_ sender: Any) {
+        fakeFlag = 0
         self.CameraTrigger()
     }
     
@@ -46,6 +49,7 @@ class ViewController: UIViewController, ImagePickerDelegate{
         let sendPicController = segue.destination as! CheckImageController
         sendPicController.getImage = self.imageSave
         sendPicController.getString = "sned success "
+        sendPicController.getFakeScore = fakeScore
     }
 }
 
@@ -55,11 +59,16 @@ extension ViewController{
         imageSave = images.first
         print(images)
         print("wrap")
+        fakeScore = "4"
+        fakeFlag = 1
     }
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
         imageSave = images.first
         print(images)
         dismiss(animated: true, completion: nil) //收起相機
+        if (fakeFlag == 0){
+            fakeScore = "2"
+        }
         self.performSegue(withIdentifier: "nextPage", sender: nil)
     }
     func cancelButtonDidPress(_ imagePicker: ImagePickerController){
