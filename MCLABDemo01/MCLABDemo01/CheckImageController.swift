@@ -57,14 +57,13 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
     @IBAction func ConfirmPhoto(_ sender: Any) {
         let loadingView = RSLoadingView(effectType: RSLoadingView.Effect.twins)
         loadingView.show(on: view)
-        FinalScoreResult = getFakeScore
+        //FinalScoreResult = getFakeScore
         //延迟3秒执行
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            print("时间2：", Date())
-            self.GetScoreDone()
-        }
+        //DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            //self.GetScoreDone()
+        //}
         
-        //self.UploadImage(self.showImage.image!, filename: "upload.jpg")
+        self.UploadImage(self.showImage.image!, filename: "upload.jpg")
     }
     //傳值給下一個Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
