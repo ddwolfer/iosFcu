@@ -59,20 +59,20 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
         loadingView.show(on: view)
         //FinalScoreResult = getFakeScore
         //延迟3秒执行
-        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            print("時間：", Date())
-            self.GetScoreDone()
-        }
+        //DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            //print("時間：", Date())
+            //self.GetScoreDone()
+        //}
         
-        //self.UploadImage(self.showImage.image!, filename: "upload.jpg")
+        self.UploadImage(self.showImage.image!, filename: "upload.jpg")
     }
     //傳值給下一個Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sendPicController = segue.destination as! UploadImageController
         sendPicController.getImage = showImage.image
         sendPicController.getString = "send success"
-        sendPicController.getScore = getFakeScore
-        //sendPicController.getScore = FinalScoreResult
+        //sendPicController.getScore = getFakeScore
+        sendPicController.getScore = FinalScoreResult
     }
     @objc func backViewCustume(){
         self.navigationController?.popViewController(animated: true)
