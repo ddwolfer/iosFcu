@@ -48,6 +48,7 @@ class UploadImageController: UIViewController {
         let backButton = UIBarButtonItem(title: "", style: .plain, target: self, action: nil)
         self.navigationItem.setLeftBarButton(backButton, animated: true)
         print(getString as Any)
+        
         HeartCount(Score: getScore)
         showImage.image = getImage
     }

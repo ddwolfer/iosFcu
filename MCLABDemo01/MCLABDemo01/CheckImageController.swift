@@ -59,19 +59,20 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
         loadingView.show(on: view)
         //FinalScoreResult = getFakeScore
         //延迟3秒执行
-        //DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
-            //self.GetScoreDone()
-        //}
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 3) {
+            print("時間：", Date())
+            self.GetScoreDone()
+        }
         
-        self.UploadImage(self.showImage.image!, filename: "upload.jpg")
+        //self.UploadImage(self.showImage.image!, filename: "upload.jpg")
     }
     //傳值給下一個Controller
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let sendPicController = segue.destination as! UploadImageController
         sendPicController.getImage = showImage.image
         sendPicController.getString = "send success"
-        //sendPicController.getScore = "3"
-        sendPicController.getScore = FinalScoreResult
+        sendPicController.getScore = getFakeScore
+        //sendPicController.getScore = FinalScoreResult
     }
     @objc func backViewCustume(){
         self.navigationController?.popViewController(animated: true)
@@ -174,6 +175,7 @@ extension CheckImageController{
             }
         })
     }
+    //獲取完分數後 把分數重置
     func ResetDatabaseData(){
         //設定database位置
         let databaseRef: DatabaseReference!
@@ -182,7 +184,7 @@ extension CheckImageController{
         updateRef.updateChildValues(["ScoreResult" : -1])
     }
     
-    //把NSDictionary轉乘string
+    //把NSDictionary轉成string
     func getJSONStringFromDictionary(dictionary:NSDictionary) -> NSString {
         if (!JSONSerialization.isValidJSONObject(dictionary)) {
             print("无法解析出JSONString")
@@ -194,7 +196,6 @@ extension CheckImageController{
     }
     //獲得分數後的動作
     func GetScoreDone(){
-        //sleep(3)
         RSLoadingView.hide(from: view)
         performSegue(withIdentifier: "getScore", sender: nil)
     }
