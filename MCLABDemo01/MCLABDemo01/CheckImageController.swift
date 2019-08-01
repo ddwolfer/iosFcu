@@ -45,7 +45,7 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
     func CameraTrigger(){
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self as? ImagePickerDelegate
-        imagePickerController.imageLimit = 1
+        imagePickerController.imageLimit = 2
         present(imagePickerController, animated: true, completion: nil)
     }
     
@@ -65,7 +65,8 @@ class CheckImageController : UIViewController,ImagePickerDelegate{
         let sendPicController = segue.destination as! UploadImageController
         sendPicController.getImage = showImage.image
         sendPicController.getString = "send success"
-        sendPicController.getScore = FinalScoreResult
+        sendPicController.getScore = "3"
+        //sendPicController.getScore = FinalScoreResult
     }
     @objc func backViewCustume(){
         self.navigationController?.popViewController(animated: true)

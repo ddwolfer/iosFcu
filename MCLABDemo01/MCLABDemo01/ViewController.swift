@@ -32,7 +32,7 @@ class ViewController: UIViewController, ImagePickerDelegate{
     func CameraTrigger(){
         let imagePickerController = ImagePickerController()
         imagePickerController.delegate = self as? ImagePickerDelegate
-        imagePickerController.imageLimit = 1
+        imagePickerController.imageLimit = 2
         present(imagePickerController, animated: true, completion: nil)
     }
     
@@ -53,11 +53,12 @@ extension ViewController{
     
     func wrapperDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
         imageSave = images.first
-        dismiss(animated: true, completion: nil) //收起相機
-        self.performSegue(withIdentifier: "nextPage", sender: nil)
+        print(images)
+        print("wrap")
     }
     func doneButtonDidPress(_ imagePicker: ImagePickerController, images: [UIImage]){
         imageSave = images.first
+        print(images)
         dismiss(animated: true, completion: nil) //收起相機
         self.performSegue(withIdentifier: "nextPage", sender: nil)
     }
